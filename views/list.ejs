@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Generate Usernames</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+    <br>
+    <table class="table">
+        <thead>
+
+        </thead>
+        <tbody>
+
+            <% 
+            let randomNum=0;
+            function rander(){
+                  randomNum = Math.floor(Math.random()*arrayOfSeeds.length);
+
+            }
+            let arrayOfSeeds = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17", "_","X","MASTER","ROCKSTAR","_eAgleBoi","_CrazyPumpkin","842","_01","007","xd","BRB","RETRO","XP","WWW", "COOL","AID","FRESH","NOOB"];
+            
+            
+            if(data.length){
+      
+                rander();
+
+    for(let i=0; i < data.length;i++){
+          data[i].keyword=data[i].keyword + arrayOfSeeds[randomNum];
+    }
+
+
+
+  for(let i = 0; i< data.length; i++) {        
+    
+    %>
+
+
+                <tr>
+                    <th scope="row ">
+                        💡username idea ➡️
+                    </th>
+                    <td class="tdNAME">
+                        <%= data[i].keyword%>
+                    </td>
+
+                </tr>
+
+
+                <%
+            
+            
+            }
+           
+   }else{ 
+    
+    
+    
+    %>
+                    <tr>
+                        <td colspan="3 ">ERROR</td>
+                    </tr>
+
+
+                    <% 
+                
+                } 
+                    
+                    
+                    %>
+
+        </tbody>
+    </table>
+
+
+
+    <script>
+        let tdNAMEs = document.getElementsByClassName('tdNAME');
+
+        for (i = 0; i < tdNAMEs.length; i++) {
+
+            tdNAMEs[i].style.textDecoration = "underline";
+
+        }
+    </script>
+</body>
+
+</html>
